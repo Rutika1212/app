@@ -27,6 +27,7 @@ def get_snowflake_connection():
         warehouse=SNOWFLAKE_WAREHOUSE,
         database=SNOWFLAKE_DATABASE,
         schema=SNOWFLAKE_SCHEMA,
+        client_session_keep_alive = True,
          proxy_host='proxy_host',
         proxy_port='proxy_port'
     )
