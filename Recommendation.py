@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from xgboost import DMatrix
 
 # Snowflake Connection Details
-SNOWFLAKE_ACCOUNT = 'WOTFAMO.BS88857'
+SNOWFLAKE_ACCOUNT = 'WOTFAMO.BS88857.ap-southeast-1.AWS'
 SNOWFLAKE_USER = 'Rutika'
 SNOWFLAKE_PASSWORD = 'Rutika@12'
 SNOWFLAKE_WAREHOUSE = 'COMPUTE_WH'
@@ -27,7 +27,9 @@ def get_snowflake_connection():
         warehouse=SNOWFLAKE_WAREHOUSE,
         database=SNOWFLAKE_DATABASE,
         schema=SNOWFLAKE_SCHEMA,
-        client_session_keep_alive = true
+        client_session_keep_alive = true,
+         proxy_host='proxy_host',
+        proxy_port='proxy_port'
     )
     return conn
 
