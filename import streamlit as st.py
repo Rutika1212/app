@@ -10,11 +10,11 @@ from sklearn.model_selection import StratifiedShuffleSplit
 
 # Snowflake connection parameters
 conn_params = {
-    "account": st.secrets["snowflake"]["account"],
-    "user": st.secrets["snowflake"]["user"],
-    "password": st.secrets["snowflake"]["password"],
-    "role": st.secrets["snowflake"]["role"],
-    "warehouse": st.secrets["snowflake"]["warehouse"],
+    "account": st.secrets["snowflake"]["BS88857"],
+    "user": st.secrets["snowflake"]["Rutika"],
+    "password": st.secrets["snowflake"]["Rutika@12"],
+    "role": st.secrets["snowflake"]["ACCOUNTADMIN"],
+    "warehouse": st.secrets["snowflake"]["COMPUTE_WH"],
     "database": "INTELLIGENT_CLIENT_MANAGEMENT",
     "schema": "DATA"
 }
