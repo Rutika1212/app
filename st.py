@@ -84,4 +84,4 @@ def model(train_data, test_data, customer_code):
     else:
         return ["No data available for this customer"]
 
-streamlit run st.py
+app()
