@@ -1,3 +1,4 @@
+pip install snowflake-snowpark-python
 import streamlit as st
 from snowflake.snowpark.session import Session
 from snowflake.snowpark.functions import col
