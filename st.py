@@ -9,16 +9,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import log_loss
 from sklearn.model_selection import StratifiedShuffleSplit
 
-# Snowflake connection parameters
-conn_params = {
-    "account": st.secrets["snowflake"]["BS88857"],
-    "user": st.secrets["snowflake"]["Rutika"],
-    "password": st.secrets["snowflake"]["Rutika@12"],
-    "role": st.secrets["snowflake"]["ACCOUNTADMIN"],
-    "warehouse": st.secrets["snowflake"]["COMPUTE_WH"],
-    "database": "INTELLIGENT_CLIENT_MANAGEMENT",
-    "schema": "DATA"
-}
+#
 
 session = Session.builder.configs(conn_params).create()
 
