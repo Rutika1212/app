@@ -12,6 +12,10 @@ SNOWFLAKE_PASSWORD = 'Rutika@12'
 SNOWFLAKE_WAREHOUSE = 'COMPUTE_WH'
 SNOWFLAKE_DATABASE = 'INTELLIGENT_CLIENT_MANAGEMENT'
 SNOWFLAKE_SCHEMA = 'DATA'
+client_session_keep_alive = true
+snowflake_role = "ACCOUNTADMIN"
+
+
 
 # Connect to Snowflake
 @st.cache(hash_funcs={snowflake.connector.connection.SnowflakeConnection: lambda _: None})
@@ -19,10 +23,12 @@ def get_snowflake_connection():
     conn = snowflake.connector.connect(
         user=SNOWFLAKE_USER,
         password=SNOWFLAKE_PASSWORD,
+        role = snowflake_role,
         account=SNOWFLAKE_ACCOUNT,
         warehouse=SNOWFLAKE_WAREHOUSE,
         database=SNOWFLAKE_DATABASE,
-        schema=SNOWFLAKE_SCHEMA
+        schema=SNOWFLAKE_SCHEMA,
+        client_session_keep_alive = true
     )
     return conn
 
