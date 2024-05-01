@@ -5,14 +5,6 @@ import xgboost as xgb
 from sklearn.preprocessing import LabelEncoder
 from xgboost import DMatrix
 
-# Snowflake Connection Details
-SNOWFLAKE_ACCOUNT = 'wotfamo-bs88857'
-SNOWFLAKE_USER = 'Rutika'
-SNOWFLAKE_PASSWORD = 'Rutika@12'
-SNOWFLAKE_WAREHOUSE = 'COMPUTE_WH'
-SNOWFLAKE_DATABASE = 'INTELLIGENT_CLIENT_MANAGEMENT'
-SNOWFLAKE_SCHEMA = 'DATA'
-snowflake_role = 'ACCOUNTADMIN'
 
 
 
